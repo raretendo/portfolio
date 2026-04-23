@@ -19,13 +19,15 @@ export default function Projects() {
 }
 
 function ProjectCard({ project }: { project: Project; }) {
+  const baseUrl = process.env.NODE_ENV === "production" ? "/porfolio" : "";
+
   return (
     <div className="transition-all duration-300 hover:scale-105 w-3/4 rounded-md bg-background dark:bg-primary overflow-hidden shadow-lg dark:shadow-[#ffffff1a] shadow-[#0000001a]">
       {project.image &&
         <a href={project.link || project.repoLink} target="_blank">
           <div className="bg-gray-700 w-full aspect-video relative">
             <Image
-              src={project.image.src}
+              src={baseUrl + project.image.src}
               alt={project.image.alt}
               fill
               className="object-cover rounded-md"

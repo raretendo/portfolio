@@ -6,7 +6,6 @@ import { DiMsqlServer } from "react-icons/di";
 import { FaClock, FaReact } from "react-icons/fa";
 import { FaDiscord, FaDownload, FaGitAlt, FaGithub, FaLocationDot, FaNodeJs, FaSquareXTwitter } from "react-icons/fa6";
 import { IoMdPerson } from "react-icons/io";
-import { IoCodeSharp } from "react-icons/io5";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiDotnet, SiLuau, SiMongodb, SiPrisma, SiShadcnui, SiTypescript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -148,9 +147,7 @@ export const siteConfig = {
   projects: [
     {
       name: "My Portfolio Website",
-      description:
-        "This is the site you're viewing right now! I built it to showcase my projects. "
-        + "It was made using Next.js, Tailwind CSS, and shadcn/ui",
+      description: "This is the site you're viewing right now! I built it to showcase my projects. ",
       repoLink: "https://github.com/raretendo/portfolio",
       link: "https://raretendo.github.io/portfolio/",
       technologies: [
@@ -215,8 +212,8 @@ export const siteConfig = {
         alt: "Custom Shell Demo"
       },
       description:
-        "A custom shell written in .NET 8, made to replicate the Bash shell/Windows Cmd Line."
-        + "Compatible with Windows & Linux. It was group project for a university course",
+        "A custom shell written in .NET 8, made to replicate the Bash shell/Windows Command Prompt. "
+        + "Compatible with Windows & Linux-based Operating Systems. It was a collaborative group project for a university course",
       repoLink: "",
       link: "",
       technologies: [
@@ -225,7 +222,7 @@ export const siteConfig = {
           name: ".NET"
         },
         {
-          icon: <IoCodeSharp />,
+          icon: <TbBrandCSharp />,
           name: "C#",
         },
         {
@@ -241,14 +238,14 @@ export const siteConfig = {
         alt: "Mining Mania Thumbnail"
       },
       description:
-        "A custom shell written in .NET 8, made to replicate the Bash shell/Windows Cmd Line."
-        + "Compatible with Windows & Linux. It was group project for a university course",
+        "Face off against other players in a race to go deeper and score points in this racing party game!"
+        + "Use items to improve your score or sabotage others!",
       repoLink: "",
       link: "https://www.roblox.com/games/17685184035/Mining-MANIA",
       technologies: [
         {
-          icon: <SiDotnet />,
-          name: ".NET"
+          icon: <SiLuau />,
+          name: "Luau"
         },
         {
           icon: <FaGitAlt color="#f05133" />,
