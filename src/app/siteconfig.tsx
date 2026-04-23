@@ -1,13 +1,15 @@
-"use client"
+"use client";
 
+import Link from "next/link";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { DiJqueryLogo, DiMsqlServer } from "react-icons/di";
+import { DiMsqlServer } from "react-icons/di";
 import { FaClock, FaReact } from "react-icons/fa";
-import { FaBootstrap, FaDiscord, FaGitAlt, FaGithub, FaLocationDot, FaNodeJs, FaSquareXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaDownload, FaGitAlt, FaGithub, FaLocationDot, FaNodeJs, FaSquareXTwitter } from "react-icons/fa6";
 import { IoMdPerson } from "react-icons/io";
+import { IoCodeSharp } from "react-icons/io5";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiDotnet, SiExpress, SiMongodb, SiPrisma, SiShadcnui, SiTypescript } from "react-icons/si";
-import { VscAzure } from "react-icons/vsc";
+import { SiDotnet, SiLuau, SiMongodb, SiPrisma, SiShadcnui, SiTypescript } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
 import Time from "./components/Time";
 
 export const siteConfig = {
@@ -16,6 +18,8 @@ export const siteConfig = {
     "dependable",
     "proactive",
     "versatile",
+    "intelligent",
+    "trainable",
     "motivated",
     "passionate",
     "strategic",
@@ -27,7 +31,7 @@ export const siteConfig = {
   cards: [
     {
       key: "location",
-      content: "North America/Caribbean",
+      content: "Kingston, Jamaica",
       icon: <FaLocationDot />,
     },
     {
@@ -39,6 +43,19 @@ export const siteConfig = {
       key: "time",
       content: <Time />,
       icon: <FaClock />
+    },
+    {
+      key: "resume",
+      content: (
+        <Link
+          href="https://docs.google.com/document/d/1WBU5I_YAvPIATr7k-XWyGBUcq-h62ONry82wbnHh8xw/edit?usp=sharing"
+          className="text-blue-500"
+          target="_blank"
+        >
+          View Resume
+        </Link>
+      ),
+      icon: <FaDownload />
     }
   ],
 
@@ -91,16 +108,24 @@ export const siteConfig = {
       name: "Next.js"
     },
     {
+      icon: <SiDotnet />,
+      name: ".NET"
+    },
+    {
       icon: <FaReact color="#61dbfb" />,
       name: "React"
     },
     {
-      icon: <RiTailwindCssFill color="#017acc" />,
-      name: "Tailwind CSS"
-    },
-    {
       icon: <SiTypescript color="#017acc" />,
       name: "TypeScript"
+    },
+    {
+      icon: <SiLuau color="#017acc" />,
+      name: "Luau"
+    },
+    {
+      icon: <TbBrandCSharp color="#017acc" />,
+      name: "C# / CSharp"
     },
     {
       icon: <BiLogoPostgresql color="#2f6792" />,
@@ -118,33 +143,16 @@ export const siteConfig = {
       icon: <FaGitAlt color="#f05133" />,
       name: "Git",
     },
-    {
-      icon: <SiPrisma className="text-foreground" />,
-      name: "Prisma",
-    },
-    {
-      icon: <SiShadcnui className="text-foreground" />,
-      name: "shadcn/ui"
-    },
-    {
-      icon: <SiExpress />,
-      name: "Express.js"
-    },
-    {
-      icon: <SiDotnet />,
-      name: ".NET"
-    },
   ],
 
   projects: [
     {
       name: "My Portfolio Website",
-      image: "",
       description:
         "This is the site you're viewing right now! I built it to showcase my projects. "
         + "It was made using Next.js, Tailwind CSS, and shadcn/ui",
-      repoLink: "https://github.com/raretendo/raretendo.github.io",
-      link: "https://raretendo.github.io",
+      repoLink: "https://github.com/raretendo/portfolio",
+      link: "https://raretendo.github.io/portfolio/",
       technologies: [
         {
           icon: <SiTypescript color="#017acc" />,
@@ -162,9 +170,12 @@ export const siteConfig = {
     },
     {
       name: "TaskManager",
-      image: "",
+      image: {
+        src: "/img/task-manager.png",
+        alt: "Task Manager Demo",
+      },
       description: "A Trello clone - manage your tasks in an efficient manner and streamline your workload",
-      repoLink: "https://github.com/raretendo",
+      repoLink: "",
       link: "",
       technologies: [
         {
@@ -199,29 +210,13 @@ export const siteConfig = {
     },
     {
       name: "Custom Shell",
-      image: "",
+      image: {
+        src: "/img/custom-shell.png",
+        alt: "Custom Shell Demo"
+      },
       description:
         "A custom shell written in .NET 8, made to replicate the Bash shell/Windows Cmd Line."
         + "Compatible with Windows & Linux. It was group project for a university course",
-      repoLink: "https://github.com/raretendo",
-      link: "",
-      technologies: [
-        {
-          icon: <SiDotnet />,
-          name: ".NET"
-        },
-        {
-          icon: <FaGitAlt color="#f05133" />,
-          name: "Git"
-        }
-      ]
-    },
-    {
-      name: "Bakery E-commerce App",
-      image: "",
-      description:
-        "An e-commerce app written for customers and staff of a bakery company to sell and manage their products easily. "
-        + "It was a group project for a university course and it was made using ASP.NET Core MVC, EF Core, Bootstrap and jQuery",
       repoLink: "",
       link: "",
       technologies: [
@@ -230,26 +225,36 @@ export const siteConfig = {
           name: ".NET"
         },
         {
-          icon: <DiMsqlServer className="text-foreground" />,
-          name: "SQL Server"
-        },
-        {
-          icon: <VscAzure className="text-foreground" />,
-          name: "Azure"
+          icon: <IoCodeSharp />,
+          name: "C#",
         },
         {
           icon: <FaGitAlt color="#f05133" />,
           name: "Git"
         },
+      ]
+    },
+    {
+      name: "Mining Mania",
+      image: {
+        src: "/img/mining-mania.png",
+        alt: "Mining Mania Thumbnail"
+      },
+      description:
+        "A custom shell written in .NET 8, made to replicate the Bash shell/Windows Cmd Line."
+        + "Compatible with Windows & Linux. It was group project for a university course",
+      repoLink: "",
+      link: "https://www.roblox.com/games/17685184035/Mining-MANIA",
+      technologies: [
         {
-          icon: <FaBootstrap color="#4c0bce" />,
-          name: "Bootstrap"
+          icon: <SiDotnet />,
+          name: ".NET"
         },
         {
-          icon: <DiJqueryLogo color="#21609b" />,
-          name: "jQuery"
+          icon: <FaGitAlt color="#f05133" />,
+          name: "Git"
         }
       ]
     }
   ]
-}
+};

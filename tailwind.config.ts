@@ -13,7 +13,11 @@ export default {
         foreground: "var(--foreground)",
         primary: "var(--primary)",
         secondary: "var(--secondary)",
-        highlight: "var(--highlight)"
+        highlight: "var(--highlight)",
+      },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui"],
+        mono: ["var(--font-geist-mono)", "ui-monospace", "SFMono-Regular"],
       },
     },
   },

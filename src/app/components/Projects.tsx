@@ -3,6 +3,7 @@ import { siteConfig } from "../siteconfig";
 import SectionLabel from "./SectionLabel";
 import { FaGithub, FaLink } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -14,15 +15,24 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project }: { project: Project; }) {
   return (
     <div className="transition-all duration-300 hover:scale-105 w-3/4 rounded-md bg-background dark:bg-primary overflow-hidden shadow-lg dark:shadow-[#ffffff1a] shadow-[#0000001a]">
-      <a href={project.link || project.repoLink} target="_blank">
-        <div className="bg-gray-700 w-full aspect-video" />
-      </a>
+      {project.image &&
+        <a href={project.link || project.repoLink} target="_blank">
+          <div className="bg-gray-700 w-full aspect-video relative">
+            <Image
+              src={project.image.src}
+              alt={project.image.alt}
+              fill
+              className="object-cover rounded-md"
+            />
+          </div>
+        </a>
+      }
       <div className="p-4 flex flex-col gap-2">
         <strong className="tracking-wider text-lg">{project.name}</strong>
         <p className="text-sm">{project.description}</p>
@@ -35,7 +45,7 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function ProjectLink({
@@ -47,14 +57,14 @@ function ProjectLink({
   icon: React.ReactElement,
   label: string,
 }) {
-  if (link.length == 0) { return null }
+  if (link.length == 0) { return null; }
   return (
     <a href={link} target="_blank" className="flex flex-wrap items-center gap-2 text-blue-500">
       {icon}
       {label}
       <FaExternalLinkAlt className="text-xs" />
     </a>
-  )
+  );
 }
 
 function ProjectBadge({
@@ -62,12 +72,12 @@ function ProjectBadge({
   icon
 }: {
   name: string,
-  icon: React.ReactElement
+  icon: React.ReactElement;
 }) {
   return (
     <div className="flex flex-wrap items-center bg-secondary p-2 gap-1 rounded-md text-sm">
       {icon}
       {name}
     </div>
-  )
+  );
 }

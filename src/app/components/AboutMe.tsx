@@ -1,6 +1,6 @@
 import SectionLabel from "./SectionLabel";
 
-const birthDate = new Date("2004-07-09T00:00:00.000Z")
+const birthDate = new Date("2004-07-09T00:00:00.000Z");
 
 export default function AboutMe() {
   return (
@@ -8,12 +8,16 @@ export default function AboutMe() {
       <SectionLabel label="About Me" id="about-me" />
       Yo 👋! My name is Xavier and I&apos;m <strong>{getAge()}</strong> years old! I go by <strong>Raretendo</strong> online.
       I&apos;m an avid, diligent software developer who started programming in <strong>2017</strong>!
+      <br />
+      <br />
+      I create <strong>full-stack web and mobile applications</strong>, especially integrating AI technology and global innovation in local contexts,
+      to create a more practical, sustainable and even exciting environment! I also make games for a hobby!
     </section>
-  )
+  );
 }
 
 function getAge() {
-  const diff = new Date(Date.now() - birthDate.getTime())
-  const diffDate = new Date(diff)
-  return Math.abs(diffDate.getUTCFullYear() - 1970)
+  const diff = new Date(Date.now() - birthDate.getTime());
+  const diffDate = new Date(diff);
+  return Math.abs(diffDate.getUTCFullYear() - 1970);
 }

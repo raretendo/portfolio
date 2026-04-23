@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import AboutMe from "./components/AboutMe";
@@ -12,7 +12,7 @@ import DynamicLabel from "./components/DynamicLabel";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen sm:px-20 px-4">
+    <main className="font-mono w-full min-h-screen sm:px-20 px-4">
       <div className="w-full flex flex-wrap">
         <header className="pt-40 w-full lg:sticky top-0 lg:w-1/2 flex flex-col items-center lg:items-start lg:h-fit gap-4">
           <h1 className="text-4xl">Hi, I&apos;m <strong>Raretendo</strong>👋</h1>
