@@ -12,7 +12,10 @@ import DynamicLabel from "./components/DynamicLabel";
 
 export default function Home() {
   return (
-    <main className="font-mono w-full min-h-screen sm:px-20 px-4">
+    <main className="font-mono w-full min-h-screen sm:px-20 px-4 relative">
+      <div className="absolute h-full w-full">
+        <svg className="h-full w-full"><pattern id="pattern" x="10" y="10" width="14.423223834988539" height="14.423223834988539" patternUnits="userSpaceOnUse" patternTransform="translate(-0.45072574484339184,-0.45072574484339184)"><circle cx="0.45072574484339184" cy="0.45072574484339184" r="0.45072574484339184" fill="#3e3e3e"></circle></pattern><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern)" className=""></rect></svg>
+      </div>
       <div className="w-full flex flex-wrap">
         <header className="pt-40 w-full lg:sticky top-0 lg:w-1/2 flex flex-col items-center lg:items-start lg:h-fit gap-4">
           <h1 className="text-4xl">Hi, I&apos;m <strong>Raretendo</strong>👋</h1>

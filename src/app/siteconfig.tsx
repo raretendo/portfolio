@@ -47,7 +47,7 @@ export const siteConfig = {
       key: "resume",
       content: (
         <Link
-          href="https://docs.google.com/document/d/1WBU5I_YAvPIATr7k-XWyGBUcq-h62ONry82wbnHh8xw/edit?usp=sharing"
+          href="https://docs.google.com/document/d/1yRNWVNsgYwMdi4mFs0kC5hpCdXp3T3S1sRdCQ_YkZkQ/edit?usp=sharing"
           className="text-blue-500"
           target="_blank"
         >
