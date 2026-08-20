@@ -32,6 +32,24 @@ h2 {
   @apply mb-8 text-gray-500 dark:text-gray-400
 }
 
+.svg-shine {
+  transform-box: fill-box;
+  animation: svg-shine 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes svg-shine {
+  0%,
+  25% {
+    transform: translateX(0);
+  }
+
+  75%,
+  100% {
+    transform: translateX(200%);
+  }
+}
+
 /* .dark .projectCard {
   --tw-shadow: 0 10px 15px -3px rgb(255 255 255 / 10%), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
